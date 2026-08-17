@@ -2,7 +2,7 @@ import React, { useEffect } from 'react';
 import { useLocation } from 'react-router-dom';
 
 const ScrollToAnchor = () => {
-    const { hash } = useLocation();
+    const { pathname, hash, search } = useLocation();
 
     useEffect(() => {
         if (hash) {
@@ -13,9 +13,9 @@ const ScrollToAnchor = () => {
                 }
             }, 100);
         } else {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
+            window.scrollTo(0, 0);
         }
-    }, [hash]);
+    }, [pathname, hash, search]);
 
     return null;
 };

@@ -1,7 +1,6 @@
 import React from 'react';
 import { categoryLinks, brandingData } from '../data/data';
 import SliderSection from '../components/SliderSection';
-import CTA from '../components/CTA';
 import { motion } from 'framer-motion';
 
 const ServicesPage = () => {
@@ -72,8 +71,6 @@ const ServicesPage = () => {
                     </div>
                 </div>
             </section>
-
-            <CTA />
         </motion.div>
     );
 };
