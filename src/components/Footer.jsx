@@ -64,7 +64,7 @@ const Footer = () => {
                 </div>
 
                 <div className="pt-8 border-t border-gray-100 flex flex-col md:flex-row justify-between items-center text-sm font-light text-gray-400">
-                    <p>© 2026 Studio. All Rights Reserved.</p>
+                    <p>© 2026 Sidd Studio. Where ideas become visual.</p>
                     <p className="font-display font-medium text-black tracking-widest uppercase mt-4 md:mt-0">Design Can Be Art.</p>
                 </div>
             </div>

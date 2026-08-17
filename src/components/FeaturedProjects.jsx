@@ -45,8 +45,8 @@ const FeaturedProjects = () => {
                                 {/* Gradient overlay to ensure text is readable over images */}
                                 <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
 
-                                {/* Text integrated inside the card at bottom-left */}
-                                <div className="absolute bottom-0 left-0 p-8 md:p-10 w-full">
+                                {/* Text integrated inside the card at bottom-left/center */}
+                                <div className="absolute bottom-0 left-0 p-8 md:p-10 w-full flex flex-col items-center text-center md:items-start md:text-left">
                                     <h3 className="text-3xl lg:text-4xl font-display font-bold text-white mb-2 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                         {project.title}
                                     </h3>
