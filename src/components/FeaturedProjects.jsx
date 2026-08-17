@@ -43,14 +43,14 @@ const FeaturedProjects = () => {
                                 />
 
                                 {/* Gradient overlay to ensure text is readable over images */}
-                                <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
+                                <div className="absolute inset-0 bg-black/40 md:bg-gradient-to-t md:from-black/80 md:via-black/20 md:to-transparent bg-gradient-to-t from-black/80 to-black/20 opacity-90 group-hover:opacity-100 transition-opacity duration-500" />
 
-                                {/* Text integrated inside the card at bottom-left/center */}
-                                <div className="absolute bottom-0 left-0 p-8 md:p-10 w-full flex flex-col items-center text-center md:items-start md:text-left">
-                                    <h3 className="text-3xl lg:text-4xl font-display font-bold text-white mb-2 translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
+                                {/* Text integrated inside the card */}
+                                <div className="absolute inset-0 md:top-auto md:bottom-0 left-0 p-8 md:p-10 w-full flex flex-col justify-center items-center text-center md:justify-end md:items-start md:text-left h-full md:h-auto">
+                                    <h3 className="text-3xl lg:text-4xl font-display font-bold text-white mb-2 translate-y-0 md:translate-y-2 group-hover:translate-y-0 transition-transform duration-500">
                                         {project.title}
                                     </h3>
-                                    <p className="text-gray-200 text-base md:text-lg font-light max-w-md opacity-90 translate-y-2 group-hover:translate-y-0 transition-transform duration-500 delay-75">
+                                    <p className="text-gray-200 text-base md:text-lg font-light max-w-md opacity-100 md:opacity-90 translate-y-0 md:translate-y-2 group-hover:translate-y-0 transition-transform duration-500 md:delay-75">
                                         {project.description}
                                     </p>
                                 </div>
