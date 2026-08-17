@@ -3,8 +3,8 @@ import React from 'react';
 const CTA = () => {
     return (
         <>
-            <section className="py-24 bg-white px-4 md:px-12">
-                <div className="max-w-[1920px] mx-auto max-w-7xl">
+            <section className="py-24 bg-white">
+                <div className="max-w-7xl mx-auto px-6 md:px-12">
                     <div className="bg-gray-200 rounded-[40px] relative overflow-hidden flex flex-col lg:flex-row min-h-[500px]">
 
                         {/* Left Side: Content */}
