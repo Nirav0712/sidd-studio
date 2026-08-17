@@ -40,13 +40,13 @@ const ProjectsPage = () => {
             initial={{ opacity: 0 }} animate={{ opacity: 1 }} exit={{ opacity: 0 }}
             className="bg-white min-h-screen"
         >
-            <section className="py-2 bg-gray-50 text-center border-b border-gray-100">
+            <section className="pt-32 pb-16 md:pt-40 md:pb-24 bg-gray-50 text-center border-b border-gray-100">
                 <div className="max-w-4xl mx-auto px-6">
-                    <span className="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-6 block">Selected Work</span>
-                    <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-black mb-8 leading-tight">
+                    <span className="text-xs md:text-sm font-semibold uppercase tracking-widest text-gray-400 mb-4 md:mb-6 block">Selected Work</span>
+                    <h1 className="text-4xl md:text-6xl lg:text-7xl font-display font-bold text-black mb-6 md:mb-8 leading-[1.1]">
                         A Collection of Ideas, Brands & Visual Experiences.
                     </h1>
-                    <p className="text-lg md:text-xl text-gray-500 max-w-2xl mx-auto font-light mb-12">
+                    <p className="text-base md:text-xl text-gray-500 max-w-2xl mx-auto font-light leading-relaxed">
                         Explore selected projects across branding, digital experiences, social media, packaging, publication and marketing design.
                     </p>
                 </div>

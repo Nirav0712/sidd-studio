@@ -33,8 +33,9 @@ const WhyChooseMe = () => {
                 top-1/2
                 -translate-y-1/2
                 z-20
+                hidden md:flex
                 w-11 h-11 md:w-12 md:h-12
-                flex items-center justify-center
+                items-center justify-center
                 rounded-full
                 border border-gray-300
                 bg-white
@@ -50,7 +51,7 @@ const WhyChooseMe = () => {
                     </button>
 
                     {/* Slider with space for arrows */}
-                    <div className="px-16 md:px-20 lg:px-24">
+                    <div className="px-6 md:px-20 lg:px-24">
                         <Swiper
                             modules={[Navigation, Autoplay, FreeMode]}
                             spaceBetween={24}
@@ -111,8 +112,9 @@ const WhyChooseMe = () => {
                 top-1/2
                 -translate-y-1/2
                 z-20
+                hidden md:flex
                 w-11 h-11 md:w-12 md:h-12
-                flex items-center justify-center
+                items-center justify-center
                 rounded-full
                 border border-gray-300
                 bg-white

@@ -4,12 +4,12 @@ import { motion } from 'framer-motion';
 
 const FeaturedProjects = () => {
     return (
-        <section id="projects" className="py-24 bg-white">
+        <section id="projects" className="py-16 md:py-24 bg-white">
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 xl:px-24">
 
                 {/* Centered Headers */}
-                <div className="text-center mb-16 flex flex-col items-center">
-                    <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-black mb-4">
+                <div className="text-center mb-10 md:mb-16 flex flex-col items-center">
+                    <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-black mb-4 md:mb-6">
                         Our Main Projects
                     </h2>
                     <p className="text-lg text-gray-500 max-w-2xl font-light">

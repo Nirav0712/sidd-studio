@@ -3,9 +3,9 @@ import logo from "../../assets/logo/logo.png";
 
 const Footer = () => {
     return (
-        <footer className="bg-gray-200 pt-24 pb-12 border-t border-gray-100">
-            <div className="max-w-7xl mx-auto px-6 md:px-12">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-16 mb-24">
+        <footer className="bg-gray-200 pt-20 md:pt-24 pb-8 md:pb-12 border-t border-gray-100">
+            <div className="max-w-[1920px] mx-auto px-6 md:px-12 xl:px-24">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 md:gap-16 mb-16 md:mb-24">
 
                     <div className="lg:col-span-1">
                         <div className="mb-6">

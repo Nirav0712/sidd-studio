@@ -31,18 +31,18 @@ const Hero = () => {
                             <div className="inline-block px-3 py-1 mb-6 border border-gray-300 rounded-full text-xs font-semibold uppercase tracking-wider text-black">
                                 {heroData[activeIndex].badge}
                             </div>
-                            <h1 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-black mb-6 leading-[1.1] tracking-tight">
+                            <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-7xl font-display font-bold text-black mb-6 leading-tight tracking-tight">
                                 {heroData[activeIndex].title}
                             </h1>
-                            <p className="text-lg md:text-xl text-gray-500 mb-10 leading-relaxed max-w-md">
+                            <p className="text-base sm:text-lg md:text-xl text-gray-500 mb-8 sm:mb-10 leading-relaxed max-w-md">
                                 {heroData[activeIndex].description}
                             </p>
 
-                            <div className="flex flex-wrap gap-4">
-                                <a href="#projects" className="px-8 py-4 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors flex items-center space-x-2">
+                            <div className="flex flex-col sm:flex-row gap-4">
+                                <a href="#projects" className="px-8 py-4 bg-black text-white rounded-full font-medium hover:bg-gray-800 transition-colors flex items-center justify-center">
                                     <span>View My Work</span>
                                 </a>
-                                <a href="/contact" className="px-8 py-4 bg-white text-black border border-gray-300 rounded-full font-medium hover:bg-gray-50 transition-colors">
+                                <a href="/contact" className="px-8 py-4 bg-white text-black border border-gray-300 rounded-full font-medium hover:bg-gray-50 transition-colors flex items-center justify-center text-center">
                                     Let's Collaborate
                                 </a>
                             </div>
@@ -50,7 +50,7 @@ const Hero = () => {
                     </AnimatePresence>
 
                     {/* Custom Navigation */}
-                    <div className="absolute bottom-12 left-6 md:left-12 lg:left-24 flex space-x-4">
+                    <div className="absolute bottom-12 left-6 md:left-12 lg:left-24 hidden md:flex space-x-4">
                         <button
                             onClick={() => swiperRef.current?.slidePrev()}
                             className="w-12 h-12 flex justify-center items-center rounded-full border border-gray-300 hover:border-black hover:bg-black hover:text-white transition-all"

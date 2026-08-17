@@ -24,7 +24,7 @@ const Navbar = () => {
 
     return (
         <nav className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${scrolled ? 'py-4 bg-white/95 backdrop-blur-sm border-b border-gray-200' : 'py-4 bg-transparent'}`}>
-            <div className="max-w-[1920px] mx-auto px-6 md:px-12 flex items-center justify-between">
+            <div className="max-w-[1920px] mx-auto px-6 md:px-12 flex items-center justify-between relative z-[60]">
 
                 {/* LOGO */}
                 <NavLink
@@ -34,7 +34,7 @@ const Navbar = () => {
                     <img
                         src={logo}
                         alt="Logo"
-                        className="h-12 w-auto object-contain h-24 w-24"
+                        className="h-10 md:h-12 w-auto object-contain"
                     />
                 </NavLink>
 
@@ -58,7 +58,7 @@ const Navbar = () => {
                 </div>
 
                 {/* MOBILE TOGGLE */}
-                <button className="lg:hidden text-black z-50 relative" onClick={() => setMobileMenu(!mobileMenu)}>
+                <button className="lg:hidden text-black z-[60] relative" onClick={() => setMobileMenu(!mobileMenu)}>
                     {mobileMenu ? <X size={28} /> : <Menu size={28} />}
                 </button>
             </div>
@@ -70,15 +70,15 @@ const Navbar = () => {
                         initial={{ opacity: 0, y: -20 }}
                         animate={{ opacity: 1, y: 0 }}
                         exit={{ opacity: 0, y: -20 }}
-                        className="fixed inset-0 bg-white z-40 flex flex-col justify-center items-center"
+                        className="fixed inset-0 bg-white z-50 flex flex-col justify-center items-center h-screen w-full"
                     >
-                        <ul className="space-y-8 text-center">
+                        <ul className="space-y-8 text-center px-4 w-full">
                             {links.map(link => (
                                 <li key={link.name}>
                                     <NavLink
                                         to={link.path}
                                         onClick={() => setMobileMenu(false)}
-                                        className="text-3xl font-display font-medium text-black hover:text-gray-500 transition-colors"
+                                        className="text-3xl font-display font-medium text-black hover:text-gray-500 transition-colors block w-full py-2"
                                     >
                                         {link.name}
                                     </NavLink>
