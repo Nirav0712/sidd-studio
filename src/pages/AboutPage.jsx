@@ -30,7 +30,7 @@ const AboutPage = () => {
                         transition={{ duration: 0.8 }}
                         className="aspect-square rounded-[40px] overflow-hidden bg-gray-200"
                     >
-                        <img src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=1000&auto=format&fit=crop&grayscale=true" className="w-full h-full object-cover" alt="Designer Placeholder" />
+                        <img src="/assets/about us/my image.jpg" className="w-full h-full object-cover" alt="Designer Placeholder" />
                     </motion.div>
                 </div>
             </section>

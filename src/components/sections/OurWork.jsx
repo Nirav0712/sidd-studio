@@ -1,5 +1,5 @@
 import React from 'react';
-import { featuredProjects } from '../../data/portfolioData';
+import { portfolioWorks as featuredProjects } from '../../data/portfolioData';
 import { ArrowRight } from 'lucide-react';
 import { motion } from 'framer-motion';
 
@@ -13,7 +13,7 @@ const OurWork = () => {
                 </div>
 
                 <div className="space-y-32">
-                    {featuredProjects.map((project, index) => (
+                    {featuredProjects.slice(0, 3).map((project, index) => (
                         <div key={project.id} className={`flex flex-col ${index % 2 === 1 ? 'md:flex-row-reverse' : 'md:flex-row'} gap-12 lg:gap-24 items-center`}>
 
                             <motion.div
@@ -52,7 +52,7 @@ const OurWork = () => {
 
                                 <div className="flex items-center space-x-4 mb-10">
                                     <span className="text-sm text-gray-500 uppercase tracking-wider font-semibold">Client:</span>
-                                    <span className="text-white bg-white/10 px-4 py-1 rounded-full text-sm">{project.client}</span>
+                                    <span className="text-white bg-white/10 px-4 py-1 rounded-full text-sm">{project.title.split(' ')[0]}</span>
                                 </div>
 
                                 <a href="#" className="group inline-flex items-center space-x-4 text-white font-semibold text-lg hover:text-accent transition-colors w-fit">

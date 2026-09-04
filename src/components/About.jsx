@@ -38,7 +38,7 @@ const About = () => {
                         className="aspect-[4/5] rounded-3xl overflow-hidden"
                     >
                         <img
-                            src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=1000&auto=format&fit=crop&grayscale=true"
+                            src="/assets/about us/image 2.jpg"
                             alt="Designer workspace"
                             className="w-full h-full object-cover"
                         />

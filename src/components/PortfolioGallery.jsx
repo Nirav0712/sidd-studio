@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { featuredProjects, categoryLinks } from '../data/data';
+import { portfolioWorks, portfolioCategories } from '../data/portfolioData';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X } from 'lucide-react';
 
@@ -7,14 +7,9 @@ const PortfolioGallery = () => {
     const [activeCategory, setActiveCategory] = useState('All');
     const [lightboxData, setLightboxData] = useState(null);
 
-    // Use featured projects combined with copies to make up the masonry
-    const allWorks = [
-        ...featuredProjects,
-        ...featuredProjects.map(p => ({ ...p, id: p.id + 10, category: 'Web Design' })),
-        ...featuredProjects.map(p => ({ ...p, id: p.id + 20, category: 'Print' }))
-    ];
+    const allWorks = [...portfolioWorks];
 
-    const categories = ['All', ...categoryLinks];
+    const categories = [...portfolioCategories];
 
     const filtered = activeCategory === 'All'
         ? allWorks

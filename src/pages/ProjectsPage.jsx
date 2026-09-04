@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { featuredProjects, categoryLinks } from '../data/data';
+import { portfolioWorks, portfolioCategories } from '../data/portfolioData';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowUpRight, X } from 'lucide-react';
 import { useLocation, useNavigate } from 'react-router-dom';
@@ -15,8 +15,8 @@ const ProjectsPage = () => {
 
     useEffect(() => {
         if (categoryParam) {
-            const match = categoryLinks.find(c => c.id === categoryParam);
-            if (match) setActiveCategory(match.name);
+            const match = portfolioCategories.find(c => c === categoryParam);
+            if (match) setActiveCategory(match);
         }
     }, [categoryParam]);
 
@@ -25,14 +25,13 @@ const ProjectsPage = () => {
         if (catName === 'All') {
             navigate('/projects', { replace: true });
         } else {
-            const matchId = categoryLinks.find(c => c.name === catName)?.id;
-            if (matchId) navigate(`/projects?category=${matchId}`, { replace: true });
+            navigate(`/projects?category=${catName}`, { replace: true });
         }
     };
 
-    const categories = ['All', ...categoryLinks.map(c => c.name)];
+    const categories = [...portfolioCategories];
 
-    const allProjects = [...featuredProjects];
+    const allProjects = [...portfolioWorks];
     const filtered = activeCategory === 'All' ? allProjects : allProjects.filter(p => p.category === activeCategory);
 
     return (

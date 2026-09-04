@@ -1,5 +1,5 @@
 import React, { useRef } from 'react';
-import { brandingData } from '../../data/portfolioData';
+import { portfolioWorks } from '../../data/portfolioData';
 import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const BrandingSlider = () => {
@@ -39,7 +39,7 @@ const BrandingSlider = () => {
                 className="flex overflow-x-auto hide-scrollbar gap-8 px-6 md:px-12 snap-x snap-mandatory"
                 style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
-                {brandingData.map((item) => (
+                {portfolioWorks.filter(p => p.category === 'Branding').slice(0, 10).map((item) => (
                     <div key={item.id} className="min-w-[85vw] md:min-w-[600px] snap-center group cursor-pointer relative overflow-hidden bg-white shadow-sm">
                         <div className="aspect-[4/3] overflow-hidden">
                             <img

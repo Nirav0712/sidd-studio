@@ -1,5 +1,5 @@
 import React from 'react';
-import { featuredProjects } from '../data/data';
+import { portfolioWorks as featuredProjects } from '../data/portfolioData';
 import { motion } from 'framer-motion';
 
 const FeaturedProjects = () => {

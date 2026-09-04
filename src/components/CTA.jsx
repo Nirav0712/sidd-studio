@@ -29,7 +29,7 @@ const CTA = () => {
                             {/* Bottom-anchored Image (Middle) */}
                             <div className="absolute bottom-0 left-[10%] w-[35%] h-[80%] rounded-t-[32px] overflow-hidden shadow-2xl bg-white border border-gray-100">
                                 <img
-                                    src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=800&auto=format&fit=crop&grayscale=true"
+                                    src="/assets/about us/bottom image 1.jpg"
                                     alt="Creative portfolio detail"
                                     className="w-full h-full object-cover"
                                 />
@@ -38,7 +38,7 @@ const CTA = () => {
                             {/* Top-anchored Image (Far Right) */}
                             <div className="absolute top-0 right-[8%] w-[35%] h-[75%] rounded-b-[32px] overflow-hidden shadow-2xl bg-white border border-gray-100">
                                 <img
-                                    src="https://images.unsplash.com/photo-1626785724573-4b799315345d?q=80&w=800&auto=format&fit=crop&grayscale=true"
+                                    src="/assets/about us/bottom image 2.jpg"
                                     alt="Brand identity detail"
                                     className="w-full h-full object-cover"
                                 />
@@ -49,13 +49,13 @@ const CTA = () => {
                         <div className="w-full md:hidden flex justify-between gap-4 px-8 pb-12 h-[250px]">
                             <div className="w-1/2 h-full rounded-t-[24px] overflow-hidden self-end">
                                 <img
-                                    src="https://images.unsplash.com/photo-1542385151-efd9000785a0?q=80&w=800&auto=format&fit=crop&grayscale=true"
+                                    src="/assets/about us/bottom image 1.jpg"
                                     className="w-full h-full object-cover" alt=""
                                 />
                             </div>
                             <div className="w-1/2 h-[80%] rounded-b-[24px] overflow-hidden self-start">
                                 <img
-                                    src="https://images.unsplash.com/photo-1626785724573-4b799315345d?q=80&w=800&auto=format&fit=crop&grayscale=true"
+                                    src="/assets/about us/bottom image 2.jpg"
                                     className="w-full h-full object-cover" alt=""
                                 />
                             </div>

@@ -1,5 +1,6 @@
 import React from 'react';
-import { categoryLinks, brandingData } from '../data/data';
+import { categoryLinks } from '../data/data';
+import { portfolioWorks } from '../data/portfolioData';
 import SliderSection from '../components/SliderSection';
 import { motion } from 'framer-motion';
 
@@ -51,12 +52,12 @@ const ServicesPage = () => {
                 </p>
             </div>
 
-            <div id="branding" className="pt-24 -mt-24"><SliderSection title="Branding & Visual Identity" data={brandingData} uniqueId="branding" /></div>
-            <div id="packaging" className="pt-16 -mt-16"><SliderSection title="Packaging Design" data={brandingData} uniqueId="packaging" /></div>
-            <div id="social-media" className="pt-16 -mt-16"><SliderSection title="Social Media Design" data={brandingData.slice().reverse()} uniqueId="social" /></div>
-            <div id="web-design" className="pt-16 -mt-16"><SliderSection title="Web Design & UI" data={brandingData} uniqueId="web" /></div>
-            <div id="outdoor-marketing" className="pt-16 -mt-16"><SliderSection title="Outdoor Marketing" data={brandingData.slice().reverse()} uniqueId="outdoor" /></div>
-            <div id="publication" className="pt-16 -mt-16 pb-24"><SliderSection title="Publication & Print Design" data={brandingData} uniqueId="publication" /></div>
+            <div id="branding" className="pt-24 -mt-24"><SliderSection title="Branding & Visual Identity" data={portfolioWorks.filter(p => p.category === 'Branding')} uniqueId="branding" /></div>
+            <div id="packaging" className="pt-16 -mt-16"><SliderSection title="Packaging Design" data={portfolioWorks.filter(p => p.category === 'Packaging')} uniqueId="packaging" /></div>
+            <div id="social-media" className="pt-16 -mt-16"><SliderSection title="Social Media Design" data={portfolioWorks.filter(p => p.category === 'Social Media')} uniqueId="social" /></div>
+            <div id="web-design" className="pt-16 -mt-16"><SliderSection title="Web Design & UI" data={portfolioWorks.filter(p => p.category === 'Web Design')} uniqueId="web" /></div>
+            <div id="outdoor-marketing" className="pt-16 -mt-16"><SliderSection title="Outdoor Marketing" data={portfolioWorks.filter(p => p.category === 'Outdoor Marketing' || p.category === 'Outdoor')} uniqueId="outdoor" /></div>
+            <div id="publication" className="pt-16 -mt-16 pb-24"><SliderSection title="Publication & Print Design" data={portfolioWorks.filter(p => p.category === 'Print Design' || p.category === 'Publication')} uniqueId="publication" /></div>
 
             <section className="py-24 bg-gray-50">
                 <div className="max-w-7xl mx-auto px-6 md:px-12">

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gallery</title>
+<style>
+  body { font-family: sans-serif; display: flex; flex-wrap: wrap; gap: 10px; }
+  .img-container { width: 300px; border: 1px solid #ccc; padding: 10px; }
+  img { max-width: 100%; height: auto; }
+</style>
+</head>
+<body>
+  <h1>Gallery TEST</h1>
+  <div id="gallery"></div>
+  <script>
+    const gallery = document.getElementById('gallery');
+    for (let i = 1; i <= 160; i++) {
+        const div = document.createElement('div');
+        div.className = 'img-container';
+        div.innerHTML = `
+            <h2>Image ${i}</h2>
+            <img src="/assets/portfolio/website image ${i}.jpg" alt="Image ${i}" loading="lazy" />
+        `;
+        gallery.appendChild(div);
+    }
+  </script>
+</body>
+</html>
