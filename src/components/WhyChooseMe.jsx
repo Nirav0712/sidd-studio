@@ -6,7 +6,7 @@ import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 const WhyChooseMe = () => {
     return (
-        <section className="py-24 bg-gray-200">
+        <section className="py-24 bg-gray-200 overflow-hidden">
             <div className="max-w-[1920px] mx-auto">
 
                 {/* Heading */}

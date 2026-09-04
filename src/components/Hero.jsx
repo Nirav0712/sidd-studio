@@ -24,7 +24,7 @@ const Hero = () => {
             <div className="absolute inset-0 z-0 w-full h-full flex flex-col md:flex-row">
 
                 {/* Left Side: Content */}
-                <div className="w-full md:w-5/12 lg:w-1/3 h-full flex flex-col justify-center pt-[104px] pl-6 pr-0 md:pl-12 lg:pl-20 bg-white relative z-20">
+                <div className="w-full md:w-5/12 lg:w-1/3 h-full flex flex-col justify-center pt-[104px] pl-6 pr-6 md:pr-0 md:pl-12 lg:pl-20 bg-white relative z-20">
                     <div className="w-full">
                         <div className="inline-block px-3 py-1 mb-6 border border-gray-300 rounded-full text-xs font-semibold uppercase tracking-wider text-black">
                             {heroData[0].badge}
@@ -64,40 +64,42 @@ const Hero = () => {
                 </div>
 
                 {/* Right Side: Image Slider */}
-                <div className="w-full md:w-7/12 lg:w-2/3 h-[50vh] md:h-full relative overflow-hidden bg-white">
-                    <AnimatePresence>
-                        <motion.div
-                            key={imgIndex}
-                            initial={{ opacity: 0 }}
-                            animate={{ opacity: 1 }}
-                            exit={{ opacity: 0 }}
-                            transition={{ duration: 0.8, ease: "easeInOut" }}
-                            className="absolute inset-0 w-full h-full"
-                        >
-                            <img
-                                src={heroImages[imgIndex]}
-                                alt={`Hero Slide ${imgIndex + 1}`}
-                                className="w-full h-full object-contain object-left"
-                            />
-                        </motion.div>
-                    </AnimatePresence>
+                <div className="w-full md:w-7/12 lg:w-2/3 h-[50vh] md:h-full bg-white px-6 pb-6 md:p-0">
+                    <div className="w-full h-full relative overflow-hidden rounded-2xl md:rounded-none">
+                        <AnimatePresence>
+                            <motion.div
+                                key={imgIndex}
+                                initial={{ opacity: 0 }}
+                                animate={{ opacity: 1 }}
+                                exit={{ opacity: 0 }}
+                                transition={{ duration: 0.8, ease: "easeInOut" }}
+                                className="absolute inset-0 w-full h-full"
+                            >
+                                <img
+                                    src={heroImages[imgIndex]}
+                                    alt={`Hero Slide ${imgIndex + 1}`}
+                                    className="w-full h-full object-cover md:object-contain object-center md:object-left"
+                                />
+                            </motion.div>
+                        </AnimatePresence>
 
-                    {/* Preload images to prevent blank frames */}
-                    <div className="hidden">
-                        {heroImages.map((src, i) => (
-                            <img key={i} src={src} alt="preload" />
-                        ))}
-                    </div>
+                        {/* Preload images to prevent blank frames */}
+                        <div className="hidden">
+                            {heroImages.map((src, i) => (
+                                <img key={i} src={src} alt="preload" />
+                            ))}
+                        </div>
 
-                    {/* Pagination dots (right side bottom) */}
-                    <div className="absolute bottom-12 right-12 z-20 flex space-x-2">
-                        {heroImages.map((_, idx) => (
-                            <button
-                                key={idx}
-                                onClick={() => setImgIndex(idx)}
-                                className={`transition-all duration-300 h-2 rounded-full ${imgIndex === idx ? 'w-8 bg-white' : 'w-2 bg-white/50'}`}
-                            />
-                        ))}
+                        {/* Pagination dots (right side bottom) */}
+                        <div className="absolute bottom-6 md:bottom-12 right-6 md:right-12 z-20 flex space-x-2">
+                            {heroImages.map((_, idx) => (
+                                <button
+                                    key={idx}
+                                    onClick={() => setImgIndex(idx)}
+                                    className={`transition-all duration-300 h-2 rounded-full ${imgIndex === idx ? 'w-8 bg-white' : 'w-2 bg-white/50'}`}
+                                />
+                            ))}
+                        </div>
                     </div>
                 </div>
             </div>
