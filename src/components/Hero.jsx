@@ -63,8 +63,8 @@ const Hero = () => {
             </div>
 
             {/* Right Side: Image Slider */}
-            <div className="w-full md:w-7/12 lg:w-2/3 h-[50vh] md:h-auto bg-white p-6 md:p-0 md:flex-1 shrink-0 relative">
-                <div className="w-full h-full relative overflow-hidden rounded-2xl md:rounded-none">
+            <div className="w-full md:w-7/12 lg:w-2/3 h-auto md:h-auto bg-white p-6 md:p-0 md:flex-1 shrink-0 relative">
+                <div className="w-full grid relative overflow-hidden rounded-2xl md:rounded-none md:block md:h-full">
                     <AnimatePresence>
                         <motion.div
                             key={imgIndex}
@@ -72,12 +72,12 @@ const Hero = () => {
                             animate={{ opacity: 1 }}
                             exit={{ opacity: 0 }}
                             transition={{ duration: 0.8, ease: "easeInOut" }}
-                            className="absolute inset-0 w-full h-full"
+                            className="col-start-1 row-start-1 w-full h-auto md:absolute md:inset-0 md:h-full"
                         >
                             <img
                                 src={heroImages[imgIndex]}
                                 alt={`Hero Slide ${imgIndex + 1}`}
-                                className="w-full h-full object-cover md:object-contain object-center md:object-left pt-0 md:pt-40"
+                                className="w-full h-auto md:h-full object-contain md:object-contain object-center md:object-left pt-0 md:pt-40"
                             />
                         </motion.div>
                     </AnimatePresence>

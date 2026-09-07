@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import logo from "../../assets/logo/logo.png";
 
 const Footer = () => {
@@ -31,12 +32,12 @@ const Footer = () => {
                     <div>
                         <h4 className="font-display font-bold text-lg mb-6">About</h4>
                         <ul className="space-y-4 font-light text-gray-500">
-                            <li><a href="#" className="hover:text-black transition-colors">Who We Are</a></li>
-                            <li><a href="#" className="hover:text-black transition-colors">About</a></li>
-                            <li><a href="#" className="hover:text-black transition-colors">Our Services</a></li>
-                            <li><a href="#" className="hover:text-black transition-colors">Our Approach</a></li>
-                            <li><a href="#" className="hover:text-black transition-colors">Join Our Team</a></li>
-                            <li><a href="#" className="hover:text-black transition-colors">Blog</a></li>
+                            <li><Link to="/" className="hover:text-black transition-colors">Home</Link></li>
+                            <li><Link to="/about" className="hover:text-black transition-colors">About</Link></li>
+                            <li><Link to="/services" className="hover:text-black transition-colors">Services</Link></li>
+                            <li><Link to="/projects" className="hover:text-black transition-colors">Projects</Link></li>
+                            <li><Link to="/" className="hover:text-black transition-colors">More</Link></li>
+                            <li><Link to="/client" className="hover:text-black transition-colors">Client</Link></li>
                         </ul>
                     </div>
 
@@ -45,9 +46,9 @@ const Footer = () => {
                         <ul className="space-y-4 font-light text-gray-500">
                             <li><a href="#" className="hover:text-black transition-colors">Instagram</a></li>
                             <li><a href="#" className="hover:text-black transition-colors">Facebook</a></li>
-                            <li><a href="#" className="hover:text-black transition-colors">YouTube</a></li>
+                            {/* <li><a href="#" className="hover:text-black transition-colors">YouTube</a></li>
                             <li><a href="#" className="hover:text-black transition-colors">Behance</a></li>
-                            <li><a href="#" className="hover:text-black transition-colors">LinkedIn</a></li>
+                            <li><a href="#" className="hover:text-black transition-colors">LinkedIn</a></li> */}
                         </ul>
                     </div>
 
@@ -57,7 +58,7 @@ const Footer = () => {
                             <li>123 Creative Studio Ave,<br />New York, NY 10012</li>
                             <li><a href="tel:+1234567890" className="hover:text-black transition-colors">+1 (234) 567-890</a></li>
                             <li><a href="mailto:hello@studio.com" className="hover:text-black transition-colors">hello@studio.com</a></li>
-                            <li><a href="#" className="hover:text-black transition-colors">WhatsApp</a></li>
+                            {/* <li><a href="#" className="hover:text-black transition-colors">WhatsApp</a></li> */}
                         </ul>
                     </div>
 

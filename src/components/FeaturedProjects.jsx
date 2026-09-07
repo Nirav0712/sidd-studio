@@ -34,7 +34,7 @@ const FeaturedProjects = () => {
                                 viewport={{ once: true, margin: "-50px" }}
                                 transition={{ duration: 0.6, delay: (index % 4) * 0.1 }}
                                 key={project.id}
-                                className={`group relative overflow-hidden rounded-[32px] bg-gray-100 ${colSpanClass} aspect-square md:aspect-auto min-h-[400px] lg:min-h-[500px]`}
+                                className={`group relative overflow-hidden rounded-[32px] bg-gray-100 ${colSpanClass} w-full max-w-full aspect-square md:aspect-auto min-h-[400px] lg:min-h-[500px]`}
                             >
                                 <img
                                     src={project.image}

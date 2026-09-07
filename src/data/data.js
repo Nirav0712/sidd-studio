@@ -79,7 +79,7 @@ export const categoryLinks = [
     { name: "Branding", id: "branding" },
     { name: "Packaging", id: "packaging" },
     { name: "Social Media", id: "social-media" },
-    { name: "Web Design", id: "web-design" },
+    // { name: "Web Design", id: "web-design" },
     { name: "Outdoor Marketing", id: "outdoor-marketing" },
     { name: "Publication", id: "publication" }
 ];
