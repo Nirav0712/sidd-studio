@@ -72,7 +72,7 @@ ${formState.message}`;
                                     <div>
                                         <h3 className="text-lg font-bold text-black mb-1">Location</h3>
                                         <p className="text-xl text-gray-500 font-light">
-                                            Los Angeles, CA<br />Available for global projects.
+                                            Ahmedabad, Gujarat.
                                         </p>
                                     </div>
                                 </div>
