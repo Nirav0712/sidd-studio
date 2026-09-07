@@ -8,6 +8,7 @@ import ServicesPage from './pages/ServicesPage';
 import ProjectsPage from './pages/ProjectsPage';
 import ContactPage from './pages/ContactPage';
 import ClientPage from './pages/ClientPage';
+import MorePage from './pages/MorePage';
 import ScrollToAnchor from './components/ScrollToAnchor';
 import { AnimatePresence } from 'framer-motion';
 
@@ -25,6 +26,7 @@ function App() {
                             <Route path="/services" element={<ServicesPage />} />
                             <Route path="/projects" element={<ProjectsPage />} />
                             <Route path="/client" element={<ClientPage />} />
+                            <Route path="/more" element={<MorePage />} />
                             <Route path="/contact" element={<ContactPage />} />
                         </Routes>
                     </AnimatePresence>
