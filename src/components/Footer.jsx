@@ -57,7 +57,7 @@ const Footer = () => {
                         <ul className="space-y-4 font-light text-gray-500">
                             <li>Ahmedabad, Gujarat</li>
                             <li><a href="tel:+919327160300" className="hover:text-black transition-colors">+91 9327160300</a></li>
-                            <li><a href="mailto:hello@studio.com" className="hover:text-black transition-colors">hello@studio.com</a></li>
+                            <li><a href="mailto:Siddhant2001patel@gmail.com" className="hover:text-black transition-colors">Siddhant2001patel@gmail.com</a></li>
                             {/* <li><a href="#" className="hover:text-black transition-colors">WhatsApp</a></li> */}
                         </ul>
                     </div>
