@@ -14,7 +14,7 @@ const ServicesPage = () => {
             className="bg-white min-h-screen"
         >
             {/* Intro Hero */}
-            <section className="py-24 bg-gray-50 border-b border-gray-100">
+            <section className="py-16 md:py-24 bg-gray-50 border-b border-gray-100">
                 <div className="max-w-7xl mx-auto px-6 md:px-12 text-center">
                     <span className="text-sm font-semibold uppercase tracking-widest text-gray-400 mb-6 block">Services</span>
                     <h1 className="text-5xl md:text-6xl lg:text-7xl font-display font-bold text-black mb-8 max-w-4xl mx-auto leading-tight">
@@ -35,22 +35,22 @@ const ServicesPage = () => {
             </section>
 
             {/* Sticky Service Nav */}
-            <div className="sticky top-[96px] bg-white/90 backdrop-blur-md z-40 border-b border-gray-100 overflow-x-auto hide-scrollbar">
-                <div className="max-w-7xl mx-auto px-6 md:px-12 flex space-x-8 py-4">
+            <div className="sticky top-[96px] bg-white/90 backdrop-blur-md z-40 border-b border-gray-100">
+                <div className="max-w-7xl mx-auto px-6 md:px-12 flex flex-wrap justify-center md:justify-start gap-4 md:space-x-8 md:gap-0 py-4">
                     {categoryLinks.map(cat => (
-                        <a key={cat.id} href={`#${cat.id}`} className="text-sm font-semibold uppercase tracking-wider text-gray-500 hover:text-black whitespace-nowrap transition-colors">
+                        <a key={cat.id} href={`#${cat.id}`} className="text-sm font-semibold uppercase tracking-wider text-gray-500 hover:text-black transition-colors text-center">
                             {cat.name}
                         </a>
                     ))}
                 </div>
             </div>
 
-            <div className="max-w-7xl mx-auto px-6 md:px-12 py-24 text-center">
+            {/* <div className="max-w-7xl mx-auto px-6 md:px-12 py-24 text-center">
                 <h2 className="text-4xl md:text-5xl font-display font-bold mb-6">Everything Your Brand Needs To Look Its Best.</h2>
                 <p className="text-lg text-gray-500 max-w-3xl mx-auto font-light">
                     Providing end-to-end creative design services across branding, digital, social media, print and outdoor marketing for consistency and powerful visual storytelling.
                 </p>
-            </div>
+            </div> */}
 
             <div id="branding" className="pt-24 -mt-24"><SliderSection title="Branding & Visual Identity" data={portfolioWorks.filter(p => p.category === 'Branding')} uniqueId="branding" /></div>
             <div id="packaging" className="pt-16 -mt-16"><SliderSection title="Packaging Design" data={portfolioWorks.filter(p => p.category === 'Packaging')} uniqueId="packaging" /></div>
@@ -59,9 +59,9 @@ const ServicesPage = () => {
             <div id="outdoor-marketing" className="pt-16 -mt-16"><SliderSection title="Outdoor Marketing" data={portfolioWorks.filter(p => p.category === 'Outdoor Marketing' || p.category === 'Outdoor')} uniqueId="outdoor" /></div>
             <div id="publication" className="pt-16 -mt-16 pb-24"><SliderSection title="Publication & Print Design" data={portfolioWorks.filter(p => p.category === 'Print Design' || p.category === 'Publication')} uniqueId="publication" /></div>
 
-            <section className="py-24 bg-gray-50">
-                <div className="max-w-7xl mx-auto px-6 md:px-12">
-                    <h2 className="text-4xl md:text-5xl font-display font-bold mb-16 text-center">How I Work</h2>
+            <section className="py-16 md:py-24 bg-gray-50">
+                <div className="max-w-7xl mx-auto px-4 md:px-12 xl:px-24">
+                    <h2 className="text-3xl md:text-5xl font-display font-bold mb-12 md:mb-16 text-center">How I Work</h2>
                     <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
                         {[{ num: "01", title: "Discover" }, { num: "02", title: "Concept" }, { num: "03", title: "Design" }, { num: "04", title: "Deliver" }].map((step, idx) => (
                             <div key={idx} className="bg-white p-8 rounded-3xl border border-gray-100 flex flex-col justify-center">

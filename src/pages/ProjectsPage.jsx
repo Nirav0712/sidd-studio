@@ -53,12 +53,12 @@ const ProjectsPage = () => {
 
             <section className="py-16 bg-white">
                 <div className="max-w-full mx-auto px-6 md:px-12">
-                    <div className="flex flex-wrap justify-center gap-3 mb-16">
+                    <div className="flex flex-wrap justify-center gap-2 md:gap-3 mb-10 md:mb-16">
                         {categories.map(cat => (
                             <button
                                 key={cat}
                                 onClick={() => handleFilter(cat)}
-                                className={`px-6 py-3 text-sm font-medium transition-all duration-300 rounded-full border ${activeCategory === cat ? 'bg-black text-white border-black' : 'bg-transparent text-gray-500 border-gray-200 hover:border-black hover:text-black'}`}
+                                className={`px-4 py-2 md:px-6 md:py-3 text-xs md:text-sm font-medium transition-all duration-300 rounded-full border whitespace-normal text-center w-auto ${activeCategory === cat ? 'bg-black text-white border-black' : 'bg-transparent text-gray-500 border-gray-200 hover:border-black hover:text-black'}`}
                             >
                                 {cat}
                             </button>
@@ -81,7 +81,7 @@ const ProjectsPage = () => {
                                         transition={{ duration: 0.4 }}
                                         key={project.id}
                                         onClick={() => setLightboxData(project)}
-                                        className={`group cursor-pointer relative overflow-hidden rounded-[32px] bg-gray-100 ${colSpanClass} aspect-square md:aspect-auto min-h-[400px] lg:min-h-[500px]`}
+                                        className={`group cursor-pointer relative overflow-hidden rounded-[32px] bg-gray-100 ${colSpanClass} w-full max-w-full aspect-square md:aspect-auto min-h-[400px] lg:min-h-[500px]`}
                                     >
                                         <img src={project.image} alt={project.title} className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 ease-out group-hover:scale-105" />
                                         <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent opacity-90 group-hover:opacity-100 transition-opacity duration-300" />

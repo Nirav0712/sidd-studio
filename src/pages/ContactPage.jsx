@@ -7,8 +7,21 @@ const ContactPage = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        // Mock Form Submission
-        console.log('Form Submitted', formState);
+
+        const messageText = `Hello, I would like to make an inquiry.
+
+Name: ${formState.name}
+Email: ${formState.email}
+Subject: ${formState.subject || 'Not specified'}
+
+Message:
+${formState.message}`;
+
+        const encodedMessage = encodeURIComponent(messageText);
+        const whatsappUrl = `https://wa.me/919327160300?text=${encodedMessage}`;
+
+        window.open(whatsappUrl, '_blank');
+
         alert('Thank you for reaching out! We will get back to you shortly.');
         setFormState({ name: '', email: '', subject: '', message: '' });
     };

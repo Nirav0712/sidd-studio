@@ -5,11 +5,11 @@ import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 
 const SliderSection = ({ title, data, uniqueId }) => {
     return (
-        <section className="py-24 bg-white overflow-hidden">
-            <div className="max-w-[1920px] mx-auto px-4 md:px-12 xl:px-24">
+        <section className="py-12 md:py-24 bg-white overflow-hidden">
+            <div className="max-w-[1920px] mx-auto px-6 md:px-12 xl:px-24">
 
-                <div className="text-center mb-16">
-                    <h2 className="text-4xl md:text-5xl lg:text-5xl font-display font-bold text-black">{title}</h2>
+                <div className="text-center mb-10 md:mb-16">
+                    <h2 className="text-3xl md:text-5xl lg:text-5xl font-display font-bold text-black px-4 md:px-0 whitespace-normal">{title}</h2>
                 </div>
 
                 <div className="flex flex-col md:flex-row items-center justify-center gap-4 lg:gap-8 w-full relative">
@@ -36,8 +36,8 @@ const SliderSection = ({ title, data, uniqueId }) => {
                             className="w-full pb-8 pt-4"
                         >
                             {data.map((item, idx) => (
-                                <SwiperSlide key={idx} className="group cursor-pointer">
-                                    <div className="bg-gray-100 rounded-[32px] overflow-hidden flex flex-col justify-end aspect-[4/5] relative mb-6 border border-gray-100 shadow-sm">
+                                <SwiperSlide key={idx} className="group cursor-pointer max-w-full">
+                                    <div className="bg-gray-100 rounded-[32px] overflow-hidden flex flex-col justify-end aspect-[4/5] relative mb-4 md:mb-6 border border-gray-100 shadow-sm w-full max-w-full">
                                         <img
                                             src={item.image}
                                             alt={item.title}

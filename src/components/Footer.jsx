@@ -46,9 +46,9 @@ const Footer = () => {
                         <ul className="space-y-4 font-light text-gray-500">
                             <li><a href="#" className="hover:text-black transition-colors">Instagram</a></li>
                             <li><a href="#" className="hover:text-black transition-colors">Facebook</a></li>
-                            {/* <li><a href="#" className="hover:text-black transition-colors">YouTube</a></li>
+                            <li><a href="#" className="hover:text-black transition-colors">YouTube</a></li>
                             <li><a href="#" className="hover:text-black transition-colors">Behance</a></li>
-                            <li><a href="#" className="hover:text-black transition-colors">LinkedIn</a></li> */}
+                            {/* <li><a href="#" className="hover:text-black transition-colors">LinkedIn</a></li> */}
                         </ul>
                     </div>
 
