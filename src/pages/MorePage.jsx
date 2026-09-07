@@ -47,8 +47,8 @@ const MorePage = () => {
             </section>
 
             {/* CATEGORY FILTERS & IMAGE CONTENT */}
-            <section className="py-16 bg-white">
-                <div className="w-full max-w-screen-2xl mx-auto px-4 sm:px-6 md:px-12 lg:px-16 xl:px-24">
+            <section className="py-12 md:py-20 bg-white">
+                <div className="max-w-full mx-auto px-6 md:px-12">
                     {/* FILTERS */}
                     <div className="flex flex-wrap justify-center gap-2 md:gap-4 mb-10 md:mb-16">
                         {categoriesData.map(cat => (
@@ -56,8 +56,8 @@ const MorePage = () => {
                                 key={cat.category}
                                 onClick={() => setActiveCategory(cat.category)}
                                 className={`px-5 py-2 md:px-8 md:py-3 text-sm md:text-base font-medium transition-all duration-300 rounded-full border whitespace-nowrap text-center ${activeCategory === cat.category
-                                        ? 'bg-black text-white border-black'
-                                        : 'bg-transparent text-gray-500 border-gray-200 hover:border-black hover:text-black'
+                                    ? 'bg-black text-white border-black'
+                                    : 'bg-transparent text-gray-500 border-gray-200 hover:border-black hover:text-black'
                                     }`}
                             >
                                 {cat.category}
