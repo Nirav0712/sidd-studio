@@ -1,13 +1,45 @@
 import React from 'react';
-import { portfolioWorks as featuredProjects } from '../data/portfolioData';
 import { motion } from 'framer-motion';
+
+// Use the existing exact images requested by the user
+import img1 from '../../assets/about us/1.jpg';
+import img2 from '../../assets/about us/2.jpg';
+import img3 from '../../assets/about us/3.jpg';
+import img4 from '../../assets/about us/4.jpg';
+
+const homeProjects = [
+    {
+        id: 1,
+        image: img1,
+        title: "Samosa Food Packaging",
+        description: "Creative pouch packaging highlighting authentic Indian snacks."
+    },
+    {
+        id: 2,
+        image: img2,
+        title: "Gota Mix Packaging",
+        description: "Premium pouch design for 100% homemade and authentic food powder."
+    },
+    {
+        id: 3,
+        image: img3,
+        title: "Utkarsh & Hir Wedding Identity",
+        description: "Elegant monogram and visual branding celebrating a special union."
+    },
+    {
+        id: 4,
+        image: img4,
+        title: "Vrajdham Brand Identity",
+        description: "Intricate golden typography logo design featuring traditional cultural motifs."
+    }
+];
 
 const FeaturedProjects = () => {
     return (
         <section id="projects" className="py-16 md:py-24 bg-white">
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 xl:px-24">
 
-                {/* Centered Headers */}
+                {/* Centered Headers - untouched */}
                 <div className="text-center mb-10 md:mb-16 flex flex-col items-center">
                     <h2 className="text-4xl md:text-5xl lg:text-7xl font-display font-bold text-black mb-4 md:mb-6">
                         Our Main Projects
@@ -19,7 +51,7 @@ const FeaturedProjects = () => {
 
                 {/* Asymmetrical 3-Column Grid Pattern */}
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-                    {featuredProjects.slice(0, 4).map((project, index) => {
+                    {homeProjects.map((project, index) => {
                         // Create a repeating asymmetrical pattern on a 3-column grid
                         // Row 1: [2 cols] [1 col]
                         // Row 2: [1 col] [2 cols] 
