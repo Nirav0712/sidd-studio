@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { motion } from 'framer-motion';
-import { Mail, MapPin, Instagram, Twitter, Linkedin, ArrowRight } from 'lucide-react';
+import { Mail, MapPin, Instagram, Facebook, Youtube, ArrowRight } from 'lucide-react';
 
 const ContactPage = () => {
     const [formState, setFormState] = useState({ name: '', email: '', subject: '', message: '' });
@@ -82,14 +82,14 @@ ${formState.message}`;
                         <div>
                             <h3 className="text-sm font-bold uppercase tracking-widest text-black mb-6">Social</h3>
                             <div className="flex gap-4">
-                                <a href="#" className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all duration-300">
+                                <a href="https://www.instagram.com/mr_.sidd._/" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all duration-300">
                                     <Instagram size={22} />
                                 </a>
-                                <a href="#" className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all duration-300">
-                                    <Twitter size={22} />
+                                <a href="https://www.facebook.com/siddhant.patel.94617999" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all duration-300">
+                                    <Facebook size={22} />
                                 </a>
-                                <a href="#" className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all duration-300">
-                                    <Linkedin size={22} />
+                                <a href="https://www.youtube.com/@siddhantpatel9781" target="_blank" rel="noopener noreferrer" className="w-14 h-14 bg-gray-100 rounded-full flex items-center justify-center text-gray-600 hover:bg-black hover:text-white transition-all duration-300">
+                                    <Youtube size={22} />
                                 </a>
                             </div>
                         </div>

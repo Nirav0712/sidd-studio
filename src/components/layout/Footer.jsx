@@ -24,10 +24,10 @@ const Footer = () => {
                 <div>
                     <h3 className="font-semibold text-lg mb-6">Socials</h3>
                     <ul className="space-y-4">
-                        <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Instagram</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Behance</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white transition-colors">LinkedIn</a></li>
-                        <li><a href="#" className="text-gray-400 hover:text-white transition-colors">Dribbble</a></li>
+                        <li><a href="https://www.instagram.com/mr_.sidd._/" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Instagram</a></li>
+                        <li><a href="https://www.behance.net/siddhant200a4d" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Behance</a></li>
+                        <li><a href="https://www.facebook.com/siddhant.patel.94617999" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">Facebook</a></li>
+                        <li><a href="https://www.youtube.com/@siddhantpatel9781" target="_blank" rel="noopener noreferrer" className="text-gray-400 hover:text-white transition-colors">YouTube</a></li>
                     </ul>
                 </div>
             </div>
