@@ -1,9 +1,30 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, FreeMode } from 'swiper/modules';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, X } from 'lucide-react';
+import { motion, AnimatePresence } from 'framer-motion';
 
 const SliderSection = ({ title, data, uniqueId }) => {
+    const [selectedItem, setSelectedItem] = useState(null);
+
+    useEffect(() => {
+        const handleKeyDown = (e) => {
+            if (e.key === 'Escape') setSelectedItem(null);
+        };
+
+        if (selectedItem) {
+            document.body.style.overflow = 'hidden';
+            window.addEventListener('keydown', handleKeyDown);
+        } else {
+            document.body.style.overflow = '';
+        }
+
+        return () => {
+            document.body.style.overflow = '';
+            window.removeEventListener('keydown', handleKeyDown);
+        };
+    }, [selectedItem]);
+
     return (
         <section className="py-12 md:py-24 bg-white overflow-hidden">
             <div className="max-w-[1920px] mx-auto px-6 md:px-12 xl:px-24">
@@ -45,9 +66,13 @@ const SliderSection = ({ title, data, uniqueId }) => {
                                         />
 
                                         <div className="absolute inset-0 bg-black/20 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                                            <div className="w-16 h-16 bg-white rounded-full flex items-center justify-center translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300">
+                                            <button
+                                                onClick={() => setSelectedItem(item)}
+                                                aria-label="Open image preview"
+                                                className="w-16 h-16 bg-white rounded-full flex items-center justify-center translate-y-4 opacity-0 group-hover:translate-y-0 group-hover:opacity-100 transition-all duration-300"
+                                            >
                                                 <ArrowRight size={24} className="text-black transform group-hover:-rotate-45 transition-transform" />
-                                            </div>
+                                            </button>
                                         </div>
                                     </div>
                                     <div className="text-center">
@@ -66,6 +91,38 @@ const SliderSection = ({ title, data, uniqueId }) => {
 
                 </div>
             </div>
+
+            {/* Lightbox Modal */}
+            <AnimatePresence>
+                {selectedItem && (
+                    <motion.div
+                        initial={{ opacity: 0 }}
+                        animate={{ opacity: 1 }}
+                        exit={{ opacity: 0 }}
+                        onClick={() => setSelectedItem(null)}
+                        className="fixed inset-0 z-[100] bg-black/95 flex items-center justify-center p-4 md:p-8"
+                    >
+                        <button
+                            onClick={(e) => { e.stopPropagation(); setSelectedItem(null); }}
+                            aria-label="Close image preview"
+                            className="absolute top-6 right-6 md:top-8 md:right-8 w-12 h-12 bg-white/10 hover:bg-white/20 rounded-full flex items-center justify-center text-white transition-colors z-[110]"
+                        >
+                            <X size={24} />
+                        </button>
+
+                        <div
+                            className="relative max-w-full max-h-full flex items-center justify-center"
+                            onClick={(e) => e.stopPropagation()}
+                        >
+                            <img
+                                src={selectedItem.image}
+                                alt={selectedItem.title}
+                                className="max-w-full max-h-[85vh] md:max-h-[90vh] object-contain rounded-lg"
+                            />
+                        </div>
+                    </motion.div>
+                )}
+            </AnimatePresence>
         </section>
     );
 };
